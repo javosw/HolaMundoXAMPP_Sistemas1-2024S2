@@ -1,0 +1,46 @@
+equipo de futbol
+	jugadores
+		jugador { edad, nombre, salario, nacionalidad }
+		calendario de entreno
+	personal para control de rendimiento de equipo
+		psicologo
+		fisioterapeuta
+		medico
+		nutricionista
+		entrenador
+	administracion
+		directiva: desiciones economicas, estrategicas
+		coordinador: contratos, alojamiento, alimentacion, distraccion, ...
+	inversores
+		patrocinadores
+		propietarios
+		socios
+	competiciones
+		liga 
+		torneo
+		exhibision
+	partidos
+		competicion
+		fecha
+		rival
+		arbitros
+		plantilla
+	plantilla
+		jugador
+		partido-id
+		posicion
+	negocios
+		entradas (tickets)
+			fecha de partido
+			total vendido
+		derechos de marca
+			television
+			juguetes
+			ropa
+		transferencia de jugadores
+	entrada
+		factura
+		id-asiento
+		precio
+		fecha
+
