@@ -33,7 +33,7 @@ if(preg_match('/^\/holaMundo\/hola/', $uri)) {
 }
 else if(preg_match('/^\/holaMundo\/jugadores/', $uri)) {
     require_once __DIR__ . '/controller/JugadoresController.php';
-    JugadoresController::listarTodos();
+    JugadoresController::jugadores();
 }
 else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
     if(!empty($_POST['competicion'])){
@@ -42,7 +42,7 @@ else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
     }
     else {
         require_once __DIR__ . '/controller/PartidosController.php';
-        PartidosController::selectCompeticion();
+        PartidosController::competiciones();
     }
 }
 else {

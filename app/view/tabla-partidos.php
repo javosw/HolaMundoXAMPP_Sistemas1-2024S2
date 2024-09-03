@@ -1,3 +1,5 @@
+<h3><?php echo "{$competicionSeleccionada}"; ?></h3>
+
 <table>
     <tr>
         <th>FECHA</th>

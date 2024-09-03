@@ -8,7 +8,7 @@ class PartidosView{
         include_once $viewDir.'\global2.php';
     }
 
-    public static function partidosPorCompeticion($competiciones,$partidos){
+    public static function partidosPorCompeticion($competiciones,$partidos,$competicionSeleccionada){
         $viewDir = __DIR__;
         include_once $viewDir.'\global1.php';
         include_once $viewDir.'\select-competicion.php';
