@@ -2,22 +2,9 @@
 
 // se podria consultar un partido por su fecha
 // tambien se podrian consultar los siguientes partidos o los partidos de un torneo
+require_once __DIR__.'/../model/Jugador.php';
 
-class Jugador{
-    public $dorsal;
-    public $nombre;
-
-    public function __construct($dorsal = 0,$nombre = 'PLAYER') {
-        $this->dorsal = $dorsal;
-        $this->nombre = $nombre;
-    }
-}
 class JugadoresController{
-    public $params;
-
-    public function __construct($params) {
-        $this->$params = $params;
-    }
 
     static function listarTodos(){
         $jugadores = array(new Jugador(10,'messi'),new Jugador(7,'ronaldo'),new Jugador(8,'pescadito'),new Jugador(1,'navas'));

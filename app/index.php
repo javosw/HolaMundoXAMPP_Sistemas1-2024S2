@@ -35,9 +35,8 @@ switch ($_SERVER['REQUEST_URI']) {
         include_once './view/base.php';
         break;
     case '/holaMundo/partidos':
-        // PartidosController::partidosPorCompetencia(liga);
-        // PartidosController::partidosPorFecha(liga);
-        require 'view/bien.php';
+        require_once __DIR__.'/controller/PartidosController.php';
+        PartidosController::selectCompeticion();
         break;
     case '/holaMundo/jugadores':
         require_once __DIR__.'/controller/JugadoresController.php';
