@@ -45,5 +45,5 @@ switch ($_SERVER['REQUEST_URI']) {
         break;
     default:
         http_response_code(404);
-        require 'view/error.php';
+        require 'view/errores.php';
 }
