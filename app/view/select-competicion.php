@@ -1,5 +1,5 @@
 Selecciona una competicion para consultar sus partidos.
-<select>
+<select onchange="getPartidos(event)">
     <?php
     foreach ($competiciones as $competicion) {
         echo "<option>{$competicion}</option>"; 
