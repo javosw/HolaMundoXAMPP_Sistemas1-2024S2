@@ -8,13 +8,12 @@ class JugadoresController{
 
     static function jugadores(){
         // MODEL
-        $jugadores = array(new Jugador(10,'messi'),new Jugador(7,'ronaldo'),new Jugador(8,'pescadito'),new Jugador(1,'navas'));
+        require_once __DIR__.'/../model/JugadoresModel.php';
+        $jugadores = JugadoresModel::jugadores();
         
         // VIEW
         require_once __DIR__.'/../view/JugadoresView.php';
         JugadoresView::jugadores($jugadores);
     }
 }
-
-
 ?>

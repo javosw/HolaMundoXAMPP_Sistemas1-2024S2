@@ -1,7 +1,7 @@
 <?php 
 
 class PartidosModel{
-    public static function getCompeticiones(){
+    public static function competiciones(){
         return array(
             'Liga Nacional 2024',
             'Copa Oro 2023',
@@ -10,7 +10,7 @@ class PartidosModel{
         );
     }
 
-    public static function getPartidos($competicion){
+    public static function partidosPorCompeticion($competicion){
         require_once __DIR__.'/../model/Partido.php';
 
         return array(

@@ -1,4 +1,7 @@
 <?php
+
+// PARA RUTAS USAR SIEMPRE -> \\\\\
+
 /*
 echo '<pre>';
 echo 'REQUEST_URI: '.$_SERVER["REQUEST_URI"].'<br/>';
@@ -28,24 +31,25 @@ $sound = substr($name, 11); // $sound is "tone"
 
 
 // if (preg_match('//', $uri)) {}
+$aqui = __DIR__;
 if(preg_match('/^\/holaMundo\/hola/', $uri)) {
-    require './view/hola.php';
+    require_once $aqui.'\view\global\hola.php';
 }
 else if(preg_match('/^\/holaMundo\/jugadores/', $uri)) {
-    require_once __DIR__ . '/controller/JugadoresController.php';
+    require_once $aqui.'\controller\JugadoresController.php';
     JugadoresController::jugadores();
 }
 else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
     if(!empty($_POST['competicion'])){
-        require_once __DIR__ . '/controller/PartidosController.php';
+        require_once $aqui.'\controller\PartidosController.php';
         PartidosController::partidosPorCompeticion($_POST['competicion']);
     }
     else {
-        require_once __DIR__ . '/controller/PartidosController.php';
+        require_once $aqui.'\controller\PartidosController.php';
         PartidosController::competiciones();
     }
 }
 else {
     http_response_code(404);
-    require '/view/errores.php';
+    require_once $aqui.'\view\global\errores.php';
 }
