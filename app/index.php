@@ -19,6 +19,14 @@ string(20) "/holaMundo/index.php"
 
 $uri = $_SERVER['REQUEST_URI'];
 
+
+
+$name = "Fred Flintstone";
+$fluff = substr($name, 6, 4); // $fluff is "lint"
+$sound = substr($name, 11); // $sound is "tone"
+
+
+
 // if (preg_match('//', $uri)) {}
 if(preg_match('/^\/holaMundo\/hola/', $uri)) {
     require './view/hola.php';
@@ -28,8 +36,14 @@ else if(preg_match('/^\/holaMundo\/jugadores/', $uri)) {
     JugadoresController::listarTodos();
 }
 else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
-    require_once __DIR__ . '/controller/PartidosController.php';
-    PartidosController::selectCompeticion();
+    if(!empty($_POST['competicion'])){
+        require_once __DIR__ . '/controller/PartidosController.php';
+        PartidosController::partidosPorCompeticion($_POST['competicion']);
+    }
+    else {
+        require_once __DIR__ . '/controller/PartidosController.php';
+        PartidosController::selectCompeticion();
+    }
 }
 else {
     http_response_code(404);
