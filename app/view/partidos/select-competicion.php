@@ -3,7 +3,7 @@ Selecciona una competicion para consultar sus partidos.
     <?php
     echo "<option selected disabled hidden></option>";
     foreach ($competiciones as $competicion) {
-        echo "<option>{$competicion}</option>"; 
+        echo "<option>{$competicion->competicion}</option>"; 
     }
     ?>
 </select>

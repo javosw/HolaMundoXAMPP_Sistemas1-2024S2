@@ -26,6 +26,8 @@ CREATE TABLE Partidos (
     FOREIGN KEY (competicion) REFERENCES Competiciones(competicion)
 );
 
+ALTER DATABASE equipo charset=utf8;
+
 INSERT INTO Competiciones (competicion) VALUES 
 ('Liga Nacional'),
 ('Copa del Rey'),
