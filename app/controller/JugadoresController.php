@@ -6,6 +6,12 @@ require_once __DIR__.'/../model/Jugador.php';
 
 class JugadoresController{
 
+    static function jugadoresAPI() {
+        // MODEL
+        require_once __DIR__.'/../model/JugadoresModel.php';
+        JugadoresModel::jugadoresAPI();
+    }
+
     static function jugadores(){
         // MODEL
         require_once __DIR__.'/../model/JugadoresModel.php';

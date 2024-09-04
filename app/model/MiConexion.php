@@ -1,12 +1,12 @@
 <?php
-class Database {
-    private $host = 'localhost:80';
+class MiConexion {
+    private $host = 'localhost:3306';
     private $user = 'root';
     private $password = '';
-    private $database = 'equipo-futbol';
+    private $database = 'equipo';
 
     public function getConnection() {
-        $hostDB = "mysql:host=" . $this->host . ";dbname=" . $this->database . ";";
+        $hostDB = "mysql:host={$this->host};dbname={$this->database};";
 
         try {
             $connection = new PDO($hostDB, $this->user, $this->password);

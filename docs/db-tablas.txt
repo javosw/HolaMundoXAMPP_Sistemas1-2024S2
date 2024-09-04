@@ -1,0 +1,16 @@
+ TABLAS
+Competiciones { PK competicion:string; }
+Partidos { PK fecha; Competiciones.competicion ; rival:string; estadio:string; }
+Jugadores { PK dorsal:number ; Personas.nit ; }
+Personas { PK nit:number; nombre:string; nacimiento:date;  }
+
+ RELACIONES
+Competiciones.competicion (1) - (*) Partidos.Competiciones.competicion
+Jugadores.nit (1) - (1) Personas.nit
+
+ CONSULTAS
+
+
+
+
+
