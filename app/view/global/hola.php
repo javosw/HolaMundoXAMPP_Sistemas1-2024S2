@@ -3,7 +3,7 @@
 <main>
     <section>
         <h3>El Equipo de las Leyendas</h3>
-        <img src="/media/equipo4k.png" />
+        <img src="/media/equipo.png" />
     </section>
     <section>
         <h3>El Escenario de las Leyendas y Hogar de los Aficionados</h3>

@@ -22,14 +22,6 @@ string(20) "/holaMundo/index.php"
 
 $uri = $_SERVER['REQUEST_URI'];
 
-
-
-$name = "Fred Flintstone";
-$fluff = substr($name, 6, 4); // $fluff is "lint"
-$sound = substr($name, 11); // $sound is "tone"
-
-
-
 // if (preg_match('//', $uri)) {}
 $aqui = __DIR__;
 if(preg_match('/^\/holaMundo\/hola/', $uri)) {
