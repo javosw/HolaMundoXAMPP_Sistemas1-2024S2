@@ -41,6 +41,10 @@ else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
         PartidosController::competiciones();
     }
 }
+else if(preg_match('/^\/holaMundo\/noticias/', $uri)) {
+    require_once $aqui.'\controller\NoticiasController.php';
+    NoticiasController::ultimasNoticias();
+}
 else if(preg_match('/^\/holaMundo\/api\/jugadores/', $uri)) {
     require_once $aqui.'\controller\JugadoresController.php';
     JugadoresController::jugadoresAPI();

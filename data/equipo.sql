@@ -25,6 +25,13 @@ CREATE TABLE Partidos (
     FOREIGN KEY (competicion) REFERENCES Competiciones(competicion)
 );
 
+CREATE TABLE Noticias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contenido TEXT NOT NULL,
+    fecha DATE NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 ALTER DATABASE equipo DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO Competiciones (competicion) VALUES 
@@ -132,3 +139,23 @@ INSERT INTO Partidos (fecha, competicion, rival, estadio) VALUES
 ('2023-02-25','Primera División de España 2023-24','Villarreal ','La Cerámica');
 
 SELECT Jugadores.dorsal, Personas.nombre FROM Jugadores INNER JOIN Personas ON Jugadores.nit = Personas.nit;
+
+INSERT INTO Noticias (contenido, fecha)
+VALUES ('El Club de Fútbol JOSQ ha firmado a Juan Pérez, un joven delantero de 18 años considerado una de las mayores promesas del fútbol nacional. Pérez se une al equipo con un contrato de tres años y la expectativa de aportar su talento en la próxima temporada.', 
+        '2024-09-01');
+
+INSERT INTO Noticias (contenido, fecha)
+VALUES ('En su debut de temporada, el Club de Fútbol JOSQ venció 3-0 al equipo rival, demostrando una gran solidez defensiva y un ataque imparable. Los aficionados aplaudieron el desempeño del equipo y su nueva alineación estratégica.', 
+        '2024-09-03');
+
+INSERT INTO Noticias (contenido, fecha)
+VALUES ('El Club de Fútbol JOSQ ha cerrado una alianza estratégica con un grupo de inversionistas internacionales, lo que permitirá mejorar sus instalaciones deportivas y fortalecer su equipo técnico. El presidente del club señaló que este es un paso crucial para el crecimiento sostenible del equipo.', 
+        '2024-09-05');
+
+INSERT INTO Noticias (contenido, fecha)
+VALUES ('Tras la salida de su anterior entrenador, el Club de Fútbol JOSQ ha anunciado la incorporación de Pedro Gómez como nuevo técnico del equipo. Con una larga trayectoria en clubes internacionales, Gómez promete llevar al equipo a nuevas alturas.', 
+        '2024-09-07');
+
+INSERT INTO Noticias (contenido, fecha)
+VALUES ('El próximo mes se llevará a cabo la ceremonia de inauguración del nuevo estadio del Club de Fútbol JOSQ, con capacidad para 40,000 espectadores. El moderno recinto será la nueva casa del equipo, y se espera que impulse el crecimiento del club tanto a nivel deportivo como comercial.', 
+        '2024-09-10');

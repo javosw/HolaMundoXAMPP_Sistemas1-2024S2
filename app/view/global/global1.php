@@ -13,6 +13,7 @@
         <h1>Club de Futbol JOSQ</h1>
         <nav>
             <a href="/holaMundo/hola">Inicio</a> |
+            <a href="/holaMundo/noticias">Noticias</a> |
             <a href="/holaMundo/partidos">Partidos</a> |
             <a href="/holaMundo/jugadores">Jugadores</a> |
             <a href="/holaMundo/api/jugadores">Jugadores API</a> |
