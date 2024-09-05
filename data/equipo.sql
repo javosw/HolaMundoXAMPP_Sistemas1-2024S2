@@ -1,3 +1,10 @@
+SET character_set_client = 'utf8mb4';
+SET character_set_connection = 'utf8mb4';
+SET character_set_database = 'utf8mb4';
+SET character_set_results = 'utf8mb4';
+SET character_set_server = 'utf8mb4';
+SET character_set_system = 'utf8mb4';
+
 CREATE DATABASE equipo DEFAULT CHARACTER SET = 'utf8mb4' COLLATE utf8mb4_unicode_ci;
 USE equipo;
 
@@ -31,8 +38,6 @@ CREATE TABLE Noticias (
     fecha DATE NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-ALTER DATABASE equipo DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO Competiciones (competicion) VALUES 
 ('Liga Nacional de Guatemala 2022-23'),
