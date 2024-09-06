@@ -16,6 +16,7 @@
             <a href="/holaMundo/noticias">Noticias</a> |
             <a href="/holaMundo/partidos">Partidos</a> |
             <a href="/holaMundo/jugadores">Jugadores</a> |
+            <a href="/holaMundo/jugadores/add">Agregar jugador</a> |
             <a href="/holaMundo/api/jugadores">Jugadores API</a> |
             <a href="/holaMundo/errores.php">Errores</a> 
         </nav>

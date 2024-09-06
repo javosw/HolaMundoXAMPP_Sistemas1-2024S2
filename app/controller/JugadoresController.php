@@ -21,5 +21,22 @@ class JugadoresController{
         require_once __DIR__.'/../view/JugadoresView.php';
         JugadoresView::jugadores($jugadores);
     }
+
+    static function formAddJugador(){
+        // VIEW
+        require_once __DIR__.'/../view/JugadoresView.php';
+        JugadoresView::formAddJugador();
+    }
+
+    static function addJugador($dorsal,$nit,$nombre,$nacimiento){
+        // MODEL
+        require_once __DIR__.'/../model/JugadoresModel.php';
+        $jugador = JugadoresModel::addJugador($dorsal,$nit,$nombre,$nacimiento);
+        $jugadores = JugadoresModel::jugadores();
+
+        // VIEW
+        require_once __DIR__.'/../view/JugadoresView.php';
+        JugadoresView::addJugador($jugadores,$jugador);
+    }
 }
 ?>

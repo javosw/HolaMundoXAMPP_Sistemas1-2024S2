@@ -27,17 +27,27 @@ $aqui = __DIR__;
 if(preg_match('/^\/holaMundo\/hola/', $uri)) {
     require_once $aqui.'\view\global\hola.php';
 }
+else if(preg_match('/^\/holaMundo\/jugadores\/add/', $uri)) {
+    require_once $aqui.'\controller\JugadoresController.php';
+
+    if(!empty($_POST['dorsal']) && !empty($_POST['nit']) && !empty($_POST['nombre']) && !empty($_POST['nacimiento'])){
+        JugadoresController::addJugador($_POST['dorsal'],$_POST['nit'],$_POST['nombre'],$_POST['nacimiento']);
+    }
+    else {
+        JugadoresController::formAddJugador();
+    }
+}
 else if(preg_match('/^\/holaMundo\/jugadores/', $uri)) {
     require_once $aqui.'\controller\JugadoresController.php';
     JugadoresController::jugadores();
 }
 else if(preg_match('/^\/holaMundo\/partidos/', $uri)) {
+    require_once $aqui.'\controller\PartidosController.php';
+
     if(!empty($_POST['competicion'])){
-        require_once $aqui.'\controller\PartidosController.php';
         PartidosController::partidosPorCompeticion($_POST['competicion']);
     }
     else {
-        require_once $aqui.'\controller\PartidosController.php';
         PartidosController::competiciones();
     }
 }
